@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19101, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PanelSettings
+  m_Name: PanelSettings-Portait
   m_EditorClassIdentifier: 
-  themeUss: {fileID: -4733365628477956816, guid: bfa43cbb4b1dd33418b35714823ef90c, type: 3}
+  themeUss: {fileID: -4733365628477956816, guid: 367bf1f13d30afc4e9b6b5dc1e3892cf, type: 3}
   m_DisableNoThemeWarning: 0
   m_TargetTexture: {fileID: 0}
   m_RenderMode: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   m_Scale: 1
   m_ReferenceDpi: 96
   m_FallbackDpi: 96
-  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ReferenceResolution: {x: 1080, y: 2160}
   m_ScreenMatchMode: 2
   m_Match: 0
   m_SortingOrder: 0
