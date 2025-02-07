@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIDocument: {fileID: 258664}
-  _dialogue: {fileID: 0}
+  _dialogue: {fileID: 11400000, guid: 97a3e309e5d9cfd498c8bb42cb759fde, type: 2}
 --- !u!114 &258664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 03463da8f23702f418dece29813f297b, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 8fc29ebe57f989241a889b33d55d5dd1, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 87ef5b920065d5d43b4c1da99be95cc7, type: 3}
   m_SortingOrder: 0
