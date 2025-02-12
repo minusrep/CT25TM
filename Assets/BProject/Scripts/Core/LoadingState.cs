@@ -1,0 +1,31 @@
+﻿using UnityEngine;
+
+namespace BProject.Core
+{
+    public class LoadingState : IPayloadState<int>
+    {
+        private readonly GameStateMachine _stateMachine;
+        
+        private readonly SceneLoader _sceneLoader;
+
+        public LoadingState(GameStateMachine stateMachine, SceneLoader sceneLoader)
+        {
+            _stateMachine = stateMachine;
+            
+            _sceneLoader = sceneLoader;
+        }
+        public void Enter(int levelIndex)
+        {
+            _sceneLoader.LoadScene(SceneId.Loading, OnLoaded);
+        }
+
+        public void Exit()
+        {
+        }
+
+        private void OnLoaded()
+        {
+            Debug.Log("Scene Loaded");            
+        }
+    }
+}
