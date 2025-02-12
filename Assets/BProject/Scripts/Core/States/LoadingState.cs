@@ -16,7 +16,7 @@
         {
             LoadingScreen.Show();
             
-            _sceneLoader.LoadScene(SceneId.Game, OnLoaded);
+            _sceneLoader.LoadScene(SceneId.Menu, OnLoaded);
         }
 
         private void OnLoaded()
