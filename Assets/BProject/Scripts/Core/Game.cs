@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using BProject.Services;
 using UnityEngine;
 
 namespace BProject.Core
@@ -9,7 +10,7 @@ namespace BProject.Core
         
         public Game()
         {
-            StateMachine = new GameStateMachine(new SceneLoader(this));
+            StateMachine = new GameStateMachine(new SceneLoader(this), AllServices.Instance);
             
             Debug.Log("Game Entered");
         }

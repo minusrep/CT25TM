@@ -1,6 +1,6 @@
-﻿using UnityEngine.SceneManagement;
+﻿using BProject.Services;
 
-namespace BProject.Core
+namespace BProject.Core.States
 {
     public class BootstrapState : IState
     {
@@ -8,31 +8,39 @@ namespace BProject.Core
         
         private readonly SceneLoader _sceneLoader;
         
-        public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader)
+        private readonly AllServices _services;
+
+        public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices services)
         {
             _stateMachine = stateMachine;
             
             _sceneLoader = sceneLoader;
+            
+            _services = services;
+            
+            RegisterServices();
         }
         
         public void Enter()
         {
-            RegisterServices();
-            
             _sceneLoader.LoadScene(SceneId.Initial, EnterLoadingState);
             
             _stateMachine.Enter<LoadingState, int>( 12);
         }
 
-        private void EnterLoadingState()
+        public void Exit()
         {
+            
         }
 
         private void RegisterServices()
         {
+            _services.RegisterSingle<IAssetProvider>(new AssetProvider());
+            
+            _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Instance.Single<IAssetProvider>()));
         }
 
-        public void Exit()
+        private void EnterLoadingState()
         {
         }
     }

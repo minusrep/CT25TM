@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace BProject.Core
+﻿namespace BProject.Core.States
 {
     public class LoadingState : IPayloadState<int>
     {

@@ -1,4 +1,4 @@
-﻿namespace BProject.Core
+﻿namespace BProject.Core.States
 {
     public class GameLoopState : IState
     {

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using BProject.Core.States;
+using BProject.Services;
 
 namespace BProject.Core
 {
@@ -9,11 +11,11 @@ namespace BProject.Core
         
         private ICanExitState _currentState;
 
-        public GameStateMachine(SceneLoader sceneLoader)
+        public GameStateMachine(SceneLoader sceneLoader, AllServices services)
         {
             _states = new Dictionary<Type, ICanExitState>()
             {
-                [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader),
+                [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, services),
                 [typeof(LoadingState)] = new LoadingState(this, sceneLoader),
                 [typeof(GameLoopState)] = new GameLoopState(this, sceneLoader),
             };
