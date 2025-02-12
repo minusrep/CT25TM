@@ -1,3 +1,8 @@
+Label {
+    -unity-font-definition: url("project://database/Assets/BProject/Graphics/Fonts/Montserrat-Bold.ttf?fileID=12800000&guid=655e505876d151a43a859870b3ca87ad&type=3#Montserrat-Bold");
+    font-size: 48px;
+}
+
 .unity-button {
     align-self: center;
     -unity-font-definition: url("project://database/Assets/BProject/Graphics/Fonts/Montserrat-Medium.ttf?fileID=12800000&guid=9bf5eb4a760b9c340892caa35a561115&type=3#Montserrat-Medium");
@@ -10,11 +15,6 @@
     border-top-right-radius: 32px;
     border-bottom-right-radius: 32px;
     border-bottom-left-radius: 32px;
-}
-
-.unity-label {
-    -unity-font-definition: url("project://database/Assets/BProject/Graphics/Fonts/Montserrat-Medium.ttf?fileID=12800000&guid=9bf5eb4a760b9c340892caa35a561115&type=3#Montserrat-Medium");
-    font-size: 80px;
 }
 
 .title {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace BProject.Core
@@ -18,13 +19,14 @@ namespace BProject.Core
 
         private IEnumerator LoadSceneAsync(SceneId sceneId, Action callback = null)
         {
-            if (SceneManager.GetActiveScene().buildIndex == (int) sceneId)
-                yield break;
-            
             var waitNextScene = SceneManager.LoadSceneAsync((int)sceneId);
-            
+
             while (!waitNextScene.isDone)
+            {
                 yield return null;
+            }
+            
+            Debug.Log($"Scene Loaded: {sceneId}");
             
             callback?.Invoke();
         }

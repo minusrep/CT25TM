@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 namespace BProject.Core
 {
@@ -16,6 +15,7 @@ namespace BProject.Core
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader),
                 [typeof(LoadingState)] = new LoadingState(this, sceneLoader),
+                [typeof(GameLoopState)] = new GameLoopState(this, sceneLoader),
             };
         }
         

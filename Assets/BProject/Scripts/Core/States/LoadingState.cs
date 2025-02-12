@@ -16,16 +16,19 @@ namespace BProject.Core
         }
         public void Enter(int levelIndex)
         {
-            _sceneLoader.LoadScene(SceneId.Loading, OnLoaded);
-        }
-
-        public void Exit()
-        {
+            LoadingScreen.Show();
+            
+            _sceneLoader.LoadScene(SceneId.Game, OnLoaded);
         }
 
         private void OnLoaded()
         {
-            Debug.Log("Scene Loaded");            
+            _stateMachine.Enter<GameLoopState>();
+        }
+
+        public void Exit()
+        {
+            LoadingScreen.Hide();
         }
     }
 }

@@ -3,7 +3,7 @@
     public enum SceneId
     {
         Initial = 0,
-        Loading = 1,
+        Menu = 1,
         Game = 2
     }
 }
