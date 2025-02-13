@@ -1,34 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace BProject.Services
+namespace BProject.UI.UIViews
 {
-    public class SeasonsSelectionView : UIView, IScreen
-    {
-        private SeasonsSelectionController _controller;
-        
-        private IScreenManipulator _screenManipulator;
-
-        public void InitScreen(VisualElement root, IScreenManipulator screenManipulator)
-        {
-            _controller = new SeasonsSelectionController(root, screenManipulator);
-            
-            _controller.ApplySubscriptions();
-        }
-
-        private void OnDestroy()
-        {
-            _controller.CancelSubscriptions();
-        }
-    }
-
-    public abstract class UIController
-    {
-        public abstract void ApplySubscriptions();
-        public abstract void CancelSubscriptions();
-    }
-    
     public class SeasonsSelectionController : UIController
     {
         private const string SelectSeasonButton = "select-season-button";
@@ -52,7 +26,6 @@ namespace BProject.Services
         {
             _root.Q<Button>(SelectSeasonButton).clicked += OnSelectButton;
         }
-
 
         public override void CancelSubscriptions()
         {

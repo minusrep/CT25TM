@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace BProject.Services
+namespace BProject.UI.UIViews
 {
     public class DialogueSelectionView : UIView, IScreen
     {
