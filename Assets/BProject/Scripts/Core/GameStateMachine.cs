@@ -16,7 +16,7 @@ namespace BProject.Core
             _states = new Dictionary<Type, ICanExitState>()
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, services),
-                [typeof(LoadingState)] = new LoadingState(this, sceneLoader),
+                [typeof(LoadingState)] = new LoadingState(this, sceneLoader, AllServices.Instance.Single<IGameFactory>()),
                 [typeof(GameLoopState)] = new GameLoopState(this, sceneLoader),
             };
         }

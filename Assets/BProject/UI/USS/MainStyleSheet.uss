@@ -1,5 +1,4 @@
 :root {
-    cursor: url("project://database/Assets/BProject/Graphics/Sprites/diamond.png?fileID=2800000&guid=b502a89f88c29434e8b267e8fcce1377&type=3#diamond");
 }
 
 Label {

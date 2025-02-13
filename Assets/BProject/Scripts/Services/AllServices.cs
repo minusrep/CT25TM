@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace BProject.Services
 {
@@ -9,12 +11,15 @@ namespace BProject.Services
 
         private static AllServices _instance;
 
-        private Dictionary<Type, IService> _services = new();
-
         public void RegisterSingle<TService>(TService service) where TService : IService
-            => _services.Add(typeof(TService), service);
+            => Implementation<TService>.ServiceInstance = service;
 
         public TService Single<TService>() where TService : IService
-            => (TService)_services.GetValueOrDefault(typeof(TService));
+            => Implementation<TService>.ServiceInstance;
+
+        private static class Implementation<TService> where TService : IService
+        {
+            public static TService ServiceInstance;
+        }
     }
 }
