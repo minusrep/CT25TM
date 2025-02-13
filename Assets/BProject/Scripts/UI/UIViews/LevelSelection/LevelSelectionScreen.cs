@@ -3,11 +3,13 @@ using UnityEngine.UIElements;
 
 namespace BProject.UI.UIViews
 {
-    public class DialogueSelectionView : UIView, IScreen
+    public class LevelSelectionScreen : UIView, IScreen
     {
         public void InitScreen(VisualElement root, IScreenManipulator screenManipulator)
         {
-            Debug.Log("Init Dialogue Selection View");
+            _controller = new LevelSelectionController(root, screenManipulator);
+            
+            _controller.ApplySubscriptions();
         }
     }
 }

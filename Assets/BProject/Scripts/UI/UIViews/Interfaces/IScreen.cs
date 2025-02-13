@@ -1,6 +1,6 @@
 ﻿using UnityEngine.UIElements;
 
-namespace BProject.Services
+namespace BProject.UI.UIViews
 {
     public interface IScreen
     {

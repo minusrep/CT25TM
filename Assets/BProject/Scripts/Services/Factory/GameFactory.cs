@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BProject.UI.UIViews;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace BProject.Services
@@ -16,14 +17,14 @@ namespace BProject.Services
 
         public void CreateRootView()
         {
-            _rootView = _assetsProvider.Instantiate(AssetPath.RootView).GetComponent<RootView>();
+            _rootView = _assetsProvider.Instantiate(AssetPath.RootViewPath).GetComponent<RootView>();
 
             _rootView.Construct(this);
         }
 
         public TView CreateUIView<TView>() where TView : UIView
         {
-            var path = $"{AssetPath.UIFolder}/{typeof(TView).Name}";
+            var path = $"{AssetPath.ScreensPath}/{typeof(TView).Name}";
             
             var view = _assetsProvider.Instantiate(path, _rootView.transform).GetComponent<TView>();
             

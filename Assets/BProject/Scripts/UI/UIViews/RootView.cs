@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using BProject.Services;
+using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace BProject.Services
+namespace BProject.UI.UIViews
 {
     public class RootView : UIView, IScreenManipulator
     {
@@ -9,7 +10,7 @@ namespace BProject.Services
         
         private VisualElement _root;
 
-        private UIView _currentView;
+        private UIView _currentScreen;
         
         [SerializeField] private UIDocument _uiDocument;
 
@@ -19,7 +20,7 @@ namespace BProject.Services
             
             _root = _uiDocument.rootVisualElement;
             
-            SetScreen<SeasonsSelectionView>();
+            SetScreen<SeasonsSelectionScreen>();
         }
 
         public void SetScreen<TView>() where TView : UIView, IScreen
@@ -30,7 +31,7 @@ namespace BProject.Services
 
             view.InitScreen(SetupView(view), this);            
 
-            _currentView = view;
+            _currentScreen = view;
         }
 
         private VisualElement SetupView(UIView view)
@@ -46,9 +47,9 @@ namespace BProject.Services
 
         private void ClearCurrentView()
         {
-            if (_currentView == null) return;
+            if (_currentScreen == null) return;
             
-            Destroy(_currentView.gameObject);
+            Destroy(_currentScreen.gameObject);
 
             _root.Clear();
         }

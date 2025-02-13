@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567972394767107269}
-  - component: {fileID: 351657766553186844}
+  - component: {fileID: -3433159761020552675}
   m_Layer: 0
-  m_Name: SeasonsSelectionView
+  m_Name: LevelSelectionScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &351657766553186844
+--- !u!114 &-3433159761020552675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6640542710437234920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d6e3b12cfd40b7a6c3f7026579d496, type: 3}
+  m_Script: {fileID: 11500000, guid: b441dd5bb8e9465cbb43a4d2ed4a6c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 9197481963319205126, guid: 170feef624d28184c8b66276de885ecd, type: 3}
+  _prefab: {fileID: 9197481963319205126, guid: bd310847e109f9b448a7566931ee1949, type: 3}

@@ -2,10 +2,8 @@
 {
     public static class AssetPath
     {
-        public const string UIFolder = "UI";
+        public const string ScreensPath = "UI/Screens";
         
-        public const string RootView = "UI/RootView";
-        
-        public const string SeasonsView = "UI/SeasonsView";
+        public const string RootViewPath = "UI/RootView";
     }
 }
