@@ -1,8 +1,9 @@
 :root {
+    -unity-font-definition: url("project://database/Assets/BProject/Graphics/Fonts/Montserrat-Medium%20SDF.asset?fileID=11400000&guid=9d7402667ecda3c4599c9d9b77b52669&type=2#Montserrat-Medium SDF");
 }
 
 Label {
-    -unity-font-definition: url("project://database/Assets/BProject/Graphics/Fonts/Montserrat-Bold.ttf?fileID=12800000&guid=655e505876d151a43a859870b3ca87ad&type=3#Montserrat-Bold");
+    -unity-font-definition: url("project://database/Assets/BProject/Graphics/Fonts/Montserrat-Medium%20SDF.asset?fileID=11400000&guid=9d7402667ecda3c4599c9d9b77b52669&type=2#Montserrat-Medium SDF");
     font-size: 48px;
 }
 
