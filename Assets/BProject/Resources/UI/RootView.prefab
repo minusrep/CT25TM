@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6517196471109904550}
   - component: {fileID: 42020388892080148}
+  - component: {fileID: 990133304810360589}
   m_Layer: 0
   m_Name: RootView
   m_TagString: Untagged
@@ -110,8 +111,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 03463da8f23702f418dece29813f297b, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 170feef624d28184c8b66276de885ecd, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 3339c444b0b60724d9c7c8fffe23632e, type: 3}
   m_SortingOrder: 0
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
+--- !u!114 &990133304810360589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104644538635604333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98decad41cae41c1bf1385e167dbe397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 0}
+  _uiDocument: {fileID: 42020388892080148}

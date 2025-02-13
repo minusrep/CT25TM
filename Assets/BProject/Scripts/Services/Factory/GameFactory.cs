@@ -16,18 +16,20 @@ namespace BProject.Services
 
         public void CreateRootView()
         {
-            var rootView = _assetsProvider.Instantiate(AssetPath.RootView).GetComponent<RootView>();
+            _rootView = _assetsProvider.Instantiate(AssetPath.RootView).GetComponent<RootView>();
 
-            rootView.GetComponent<RootView>().Construct(this);
+            _rootView.Construct(this);
         }
 
-        public SeasonsView CreateSeasonsView()
+        public TView CreateUIView<TView>() where TView : UIView
         {
-            var seasonsView = _assetsProvider.Instantiate(AssetPath.SeasonsView).GetComponent<SeasonsView>();
+            var path = $"{AssetPath.UIFolder}/{typeof(TView).Name}";
             
-            seasonsView.Construct();
+            var view = _assetsProvider.Instantiate(path, _rootView.transform).GetComponent<TView>();
             
-            return seasonsView;
+            view.Construct();
+
+            return view;
         }
     }
 }

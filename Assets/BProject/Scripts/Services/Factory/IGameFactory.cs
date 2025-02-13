@@ -5,6 +5,6 @@ namespace BProject.Services
     public interface IGameFactory : IService
     {
         void CreateRootView();
-        SeasonsView CreateSeasonsView();
+        TView CreateUIView<TView>() where TView : UIView;
     }
 }
